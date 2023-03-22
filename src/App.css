@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+.MainCard > img{
+    opacity: .2;
+    transition: .3s all;
+}
+.MainCard{
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.MainCard:hover > img{
+    opacity: 1;
+    scale: 1.2;
+    cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.MainCard > .MainCardName{
+    position: absolute;
+    z-index: 10;
+    top: 30%;
+    left: 8%;
+    transition: .3s all;
+    cursor: pointer;
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: rgb(223, 71, 89);
+    transform-origin: 0%;
   }
+
+
+.MainCard:hover > .MainCardName{
+    top: 10%;
+    left: 10;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.MainCard:hover > .MainCardName > p {
+    font-size: 15px;
+    text-shadow: none;
+    color: #fff;
+    background-color: aqua;
+    padding: 0px 20px 0px 20px;
+    border-radius: 50px;
+}
+.MainCard > .MainCardName > p {
+    font-weight: bolder;
+    font-size: 60px;
+    transition: .3s all;
+    color: white;
+    text-shadow: 0 0 10px rgb(121, 111, 111), 0 0 15px #9d9191;
 }
 
-.App-link {
-  color: #61dafb;
+.MenuItem{
+    text-decoration: none;
+    transition: .3s all;    
+    color: black;
+    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.MenuItem:hover{
+    color: rgb(196, 20, 20);
+    border-bottom: 1px solid black;
 }
